@@ -1,25 +1,28 @@
 from os import replace, system
 
 def menu():
-    print('Program Konversi Bilangan')
-    print('1. Desimal')
-    print('2. Biner')
-    print('3. Oktal')
-    print('4. Hexadecimal')
-    print('5. String to ASCII')
-    print('6. Exit')
-    choose = input('Pilih Menu : ')
-    if choose == '1':
+    print("=======================================")
+    print('Program Konversi Bilangan'.center(40))
+    print('=======================================')
+    print('| 1. Desimal                          |')
+    print('| 2. Biner                            |')
+    print('| 3. Oktal                            |')
+    print('| 4. Hexadecimal                      |')
+    print('| 5. String to ASCII                  |')
+    print('| 6. Exit                             |')
+    print('=======================================')
+    choice = input('Pilih Menu : ')
+    if choice == '1':
         desimal()
-    elif choose == '2':
+    elif choice == '2':
         biner()
-    elif choose == '3':
+    elif choice == '3':
         oktal()
-    elif choose == '4':
+    elif choice == '4':
         hexadecimal()
-    elif choose == '5':
+    elif choice == '5':
         string_to_ascii()
-    elif choose == '6':
+    elif choice == '6':
         print("Terima kasih telah menggunakan program ini.")
         exit()
     else:
@@ -89,7 +92,7 @@ def hexadecimal():
     print('| Biner   : ',biner)
     print('| Oktal   : ',oktal)
     asking()
-    
+
 def string_to_ascii():
     try:
         string = input("Masukkan huruf: ")
@@ -108,7 +111,7 @@ def asking():
         exit()
     else:
         answrong()
-        
+
 def answrong():
     ask = input('Mohon pilih y/Y untuk pergi ke menu dan pilih t/T untuk keluar :')
     if ask == "y" or ask == "Y":
@@ -118,5 +121,5 @@ def answrong():
         exit()
     else:
         answrong()
-      
+        
 menu()
