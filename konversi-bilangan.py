@@ -6,7 +6,8 @@ def menu():
     print('2. Biner')
     print('3. Oktal')
     print('4. Hexadecimal')
-    print('5. Exit')
+    print('5. String to ASCII')
+    print('6. Exit')
     choose = input('Pilih Menu : ')
     if choose == '1':
         desimal()
@@ -17,6 +18,8 @@ def menu():
     elif choose == '4':
         hexadecimal()
     elif choose == '5':
+        string_to_ascii()
+    elif choose == '6':
         exit()
     else:
         wrong()
@@ -85,6 +88,14 @@ def hexadecimal():
     print('| Biner   : ',biner)
     print('| Oktal   : ',oktal)
     asking()
+    
+def string_to_ascii():
+    try:
+        string = input("Masukkan huruf: ")
+        ascii_list = [ord(char) for char in string]
+        print("ASCII code:", ascii_list)
+    except:
+        print("Terjadi kesalahan saat memproses input.")
 
 def asking():
     ask = input('Ingin mengonversi bilangan lain? ( y / t ) :')
