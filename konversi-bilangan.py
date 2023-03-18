@@ -20,6 +20,7 @@ def menu():
     elif choose == '5':
         string_to_ascii()
     elif choose == '6':
+        print("Terima kasih telah menggunakan program ini.")
         exit()
     else:
         wrong()
@@ -96,12 +97,14 @@ def string_to_ascii():
         print("ASCII code:", ascii_list)
     except:
         print("Terjadi kesalahan saat memproses input.")
+    asking()
 
 def asking():
     ask = input('Ingin mengonversi bilangan lain? ( y / t ) :')
     if ask == "y" or ask == "Y":
         menu()
     elif ask == "t" or ask == "T":
+        print("Terima kasih telah menggunakan program ini.")
         exit()
     else:
         answrong()
@@ -111,6 +114,7 @@ def answrong():
     if ask == "y" or ask == "Y":
         menu()
     elif ask == "t" or ask == "T":
+        print("Terima kasih telah menggunakan program ini.")
         exit()
     else:
         answrong()
