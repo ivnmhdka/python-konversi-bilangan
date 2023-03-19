@@ -46,7 +46,17 @@ def desimal():
     print('Biner : ',bineri)
     print('Oktal : ',oktal)
     print('Hexa  : ',heks)
-    asking()
+    while True:
+        kembali = input('Ulangi Konversi? [y/t]')
+        if kembali == "y" or kembali == "Y":
+            desimal()
+            break
+        elif kembali == "t" or kembali == "T":
+            menu()
+            break
+        else:
+            print("Input tidak valid, silakan masukkan 'y' atau 't'.")
+    # asking()
 
 def biner():
     print("Konversi Bilangan Biner")
@@ -61,7 +71,17 @@ def biner():
     print('| Decimal : ',angka)
     print('| Oktal   : ',oktal)
     print('| Hexa    : ',heks)
-    asking()
+    while True:
+        kembali = input('Ulangi Konversi? [y/t]')
+        if kembali == "y" or kembali == "Y":
+            biner()
+            break
+        elif kembali == "t" or kembali == "T":
+            menu()
+            break
+        else:
+            print("Input tidak valid, silakan masukkan 'y' atau 't'.")
+    # asking()
 
 def oktal():
     print("Konversi Bilangan Oktal")
@@ -76,7 +96,17 @@ def oktal():
     print('| Decimal : ',angka)
     print('| biner   : ',biner)
     print('| Hexa    : ',heks)
-    asking()
+    while True:
+        kembali = input('Ulangi Konversi? [y/t]')
+        if kembali == "y" or kembali == "Y":
+            oktal()
+            break
+        elif kembali == "t" or kembali == "T":
+            menu()
+            break
+        else:
+            print("Input tidak valid, silakan masukkan 'y' atau 't'.")
+    # asking()
 
 def hexadecimal():
     print("Konversi Bilangan Hexadecimal")
@@ -91,7 +121,17 @@ def hexadecimal():
     print('| Decimal : ',angka)
     print('| Biner   : ',biner)
     print('| Oktal   : ',oktal)
-    asking()
+    while True:
+        kembali = input('Ulangi Konversi? [y/t]')
+        if kembali == "y" or kembali == "Y":
+            hexadecimal()
+            break
+        elif kembali == "t" or kembali == "T":
+            menu()
+            break
+        else:
+            print("Input tidak valid, silakan masukkan 'y' atau 't'.")
+    # asking()
 
 def string_to_ascii():
     try:
@@ -100,26 +140,36 @@ def string_to_ascii():
         print("ASCII code:", ascii_list)
     except:
         print("Terjadi kesalahan saat memproses input.")
-    asking()
+    while True:
+        kembali = input('Ulangi Konversi? [y/t]')
+        if kembali == "y" or kembali == "Y":
+            string_to_ascii()
+            break
+        elif kembali == "t" or kembali == "T":
+            menu()
+            break
+        else:
+            print("Input tidak valid, silakan masukkan 'y' atau 't'.")
+    # asking()
 
-def asking():
-    ask = input('Ingin mengonversi bilangan lain? ( y / t ) :')
-    if ask == "y" or ask == "Y":
-        menu()
-    elif ask == "t" or ask == "T":
-        print("Terima kasih telah menggunakan program ini.")
-        exit()
-    else:
-        answrong()
+# def asking():
+#     ask = input('Ingin mengonversi bilangan lain? ( y / t ) :')
+#     if ask == "y" or ask == "Y":
+#         menu()
+#     elif ask == "t" or ask == "T":
+#         print("Terima kasih telah menggunakan program ini.")
+#         exit()
+#     else:
+#         answrong()
 
-def answrong():
-    ask = input('Mohon pilih y/Y untuk pergi ke menu dan pilih t/T untuk keluar :')
-    if ask == "y" or ask == "Y":
-        menu()
-    elif ask == "t" or ask == "T":
-        print("Terima kasih telah menggunakan program ini.")
-        exit()
-    else:
-        answrong()
+# def answrong():
+#     ask = input('Mohon pilih y/Y untuk pergi ke menu dan pilih t/T untuk keluar :')
+#     if ask == "y" or ask == "Y":
+#         menu()
+#     elif ask == "t" or ask == "T":
+#         print("Terima kasih telah menggunakan program ini.")
+#         exit()
+#     else:
+#         answrong()
         
 menu()
