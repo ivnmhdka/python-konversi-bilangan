@@ -9,7 +9,7 @@ def menu():
     print('| 3. Oktal                            |')
     print('| 4. Hexadecimal                      |')
     print('| 5. String to ASCII                  |')
-    print('| 6. Exit                             |')
+    print('| 0. Exit                             |')
     print('=======================================')
     choice = input('Pilih Menu : ')
     if choice == '1':
@@ -22,7 +22,7 @@ def menu():
         hexadecimal()
     elif choice == '5':
         string_to_ascii()
-    elif choice == '6':
+    elif choice == '0':
         print("Terima kasih telah menggunakan program ini.")
         exit()
     else:
@@ -56,7 +56,6 @@ def desimal():
             break
         else:
             print("Input tidak valid, silakan masukkan 'y' atau 't'.")
-    # asking()
 
 def biner():
     print("Konversi Bilangan Biner")
@@ -81,7 +80,6 @@ def biner():
             break
         else:
             print("Input tidak valid, silakan masukkan 'y' atau 't'.")
-    # asking()
 
 def oktal():
     print("Konversi Bilangan Oktal")
@@ -106,7 +104,6 @@ def oktal():
             break
         else:
             print("Input tidak valid, silakan masukkan 'y' atau 't'.")
-    # asking()
 
 def hexadecimal():
     print("Konversi Bilangan Hexadecimal")
@@ -131,7 +128,6 @@ def hexadecimal():
             break
         else:
             print("Input tidak valid, silakan masukkan 'y' atau 't'.")
-    # asking()
 
 def string_to_ascii():
     try:
@@ -150,26 +146,5 @@ def string_to_ascii():
             break
         else:
             print("Input tidak valid, silakan masukkan 'y' atau 't'.")
-    # asking()
 
-# def asking():
-#     ask = input('Ingin mengonversi bilangan lain? ( y / t ) :')
-#     if ask == "y" or ask == "Y":
-#         menu()
-#     elif ask == "t" or ask == "T":
-#         print("Terima kasih telah menggunakan program ini.")
-#         exit()
-#     else:
-#         answrong()
-
-# def answrong():
-#     ask = input('Mohon pilih y/Y untuk pergi ke menu dan pilih t/T untuk keluar :')
-#     if ask == "y" or ask == "Y":
-#         menu()
-#     elif ask == "t" or ask == "T":
-#         print("Terima kasih telah menggunakan program ini.")
-#         exit()
-#     else:
-#         answrong()
-        
 menu()
