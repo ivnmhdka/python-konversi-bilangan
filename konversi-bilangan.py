@@ -47,7 +47,7 @@ def desimal():
     print('Oktal : ',oktal)
     print('Hexa  : ',heks)
     while True:
-        kembali = input('Ulangi Konversi? [y/t]')
+        kembali = input('Ulangi Konversi? ( y / t ) : ')
         if kembali == "y" or kembali == "Y":
             desimal()
             break
@@ -71,7 +71,7 @@ def biner():
     print('| Oktal   : ',oktal)
     print('| Hexa    : ',heks)
     while True:
-        kembali = input('Ulangi Konversi? [y/t]')
+        kembali = input('Ulangi Konversi? ( y / t ) : ')
         if kembali == "y" or kembali == "Y":
             biner()
             break
@@ -95,7 +95,7 @@ def oktal():
     print('| biner   : ',biner)
     print('| Hexa    : ',heks)
     while True:
-        kembali = input('Ulangi Konversi? [y/t]')
+        kembali = input('Ulangi Konversi? ( y / t ) : ')
         if kembali == "y" or kembali == "Y":
             oktal()
             break
@@ -119,7 +119,7 @@ def hexadecimal():
     print('| Biner   : ',biner)
     print('| Oktal   : ',oktal)
     while True:
-        kembali = input('Ulangi Konversi? [y/t]')
+        kembali = input('Ulangi Konversi? ( y / t ) : ')
         if kembali == "y" or kembali == "Y":
             hexadecimal()
             break
@@ -131,13 +131,15 @@ def hexadecimal():
 
 def string_to_ascii():
     try:
-        string = input("Masukkan huruf: ")
+        string = input("Masukkan String : ")
         ascii_list = [ord(char) for char in string]
-        print("ASCII code:", ascii_list)
+        print("String:  ASCII:")
+        for char, code in zip(string, ascii_list):
+            print(f"{char:<8} {code}")
     except:
         print("Terjadi kesalahan saat memproses input.")
     while True:
-        kembali = input('Ulangi Konversi? [y/t]')
+        kembali = input('Ulangi Konversi? ( y / t ) : ')
         if kembali == "y" or kembali == "Y":
             string_to_ascii()
             break
